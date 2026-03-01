@@ -1,6 +1,7 @@
+# 12. write a program for Encryption and Decryption the text using AES Algorithm 
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
-from Crypto.Util.Padding import pad, unpad
+from Crypto.Util.Padding import pad, unpad            #pip install pycryptodome
 
 def encrypt_AES(key, plaintext):
     cipher = AES.new(key, AES.MODE_CBC)   
@@ -18,4 +19,5 @@ decrypted_text = decrypt_AES(key, ciphertext, iv)
 
 print("Plaintext:", plaintext)
 print("Ciphertext:", ciphertext)
+
 print("Decrypted Text:", decrypted_text)
